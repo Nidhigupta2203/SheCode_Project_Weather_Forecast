@@ -5,8 +5,10 @@ function showWeather(response) {
   let description = document.querySelector("#description");
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#wind");
+  let iconElement = document.querySelector("#icon");
 
   weather.innerHTML = Math.round(response.data.temperature.current);
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="current-temperature-icon"/>`;
   cityElement.innerHTML = response.data.city;
   description.innerHTML = response.data.condition.description;
   humidity.innerHTML = `${response.data.temperature.humidity}%`;
@@ -22,8 +24,8 @@ function searchCity(city) {
 function search(event) {
   event.preventDefault();
   let searchInputElement = document.querySelector("#search-input");  
-
-  let searchCity(searchInputElement.value); 
+ 
+   searchCity(searchInputElement.value);
 }
 
 function formatDate(date) {
@@ -58,5 +60,6 @@ searchForm.addEventListener("submit", search);
 
 let currentDateELement = document.querySelector("#current-date");
 currentDateELement.innerHTML = formatDate(new Date());
+
 
 
