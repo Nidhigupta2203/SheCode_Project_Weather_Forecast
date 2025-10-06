@@ -1,18 +1,19 @@
 function showWeather(response) {
- 
-  let weather = document.querySelector(".current-temperature-value");
-  let cityElement = document.querySelector("#current-city");
-  let description = document.querySelector("#description");
-  let humidity = document.querySelector("#humidity");
+ let weather = document.querySelector(".current-temperature-value");
+ let cityElement = document.querySelector("#current-city");
+ let description = document.querySelector("#description");
+ let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#wind");
   let iconElement = document.querySelector("#icon");
+  let currentDateElement = document.querySelector("#current-date");
 
   weather.innerHTML = Math.round(response.data.temperature.current);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="current-temperature-icon"/>`;
-  cityElement.innerHTML = response.data.city;
-  description.innerHTML = response.data.condition.description;
-  humidity.innerHTML = `${response.data.temperature.humidity}%`;
-  wind.innerHTML = `${response.data.wind.speed}km/h`;
+   currentDateElement.innerHTML = formatDate(new Date());
+ cityElement.innerHTML = response.data.city;
+ description.innerHTML = response.data.condition.description;
+ humidity.innerHTML = `${response.data.temperature.humidity}%`;
+ wind.innerHTML = `${response.data.wind.speed}km/h`;
 }
 
 function searchCity(city) { 
@@ -24,9 +25,10 @@ function searchCity(city) {
 function search(event) {
   event.preventDefault();
   let searchInputElement = document.querySelector("#search-input");  
- 
-   searchCity(searchInputElement.value);
+
+  searchCity(searchInputElement.value);
 }
+
 
 function formatDate(date) {
   let minutes = date.getMinutes();
@@ -58,8 +60,7 @@ function formatDate(date) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
 
-let currentDateELement = document.querySelector("#current-date");
-currentDateELement.innerHTML = formatDate(new Date());
+
 
 
 
