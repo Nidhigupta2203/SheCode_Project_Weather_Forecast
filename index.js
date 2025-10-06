@@ -2,13 +2,13 @@ function showWeather(response) {
  
   let weather = document.querySelector(".current-temperature-value");
   let cityElement = document.querySelector("#current-city");
-  let discription = document.querySelector("#discription");
+  let description = document.querySelector("#description");
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#wind");
 
   weather.innerHTML = Math.round(response.data.temperature.current);
   cityElement.innerHTML = response.data.city;
-  discription.innerHTML = response.data.condition.discription;
+  description.innerHTML = response.data.condition.description;
   humidity.innerHTML = `${response.data.temperature.humidity}%`;
   wind.innerHTML = `${response.data.wind.speed}km/h`;
 }
@@ -58,4 +58,5 @@ searchForm.addEventListener("submit", search);
 
 let currentDateELement = document.querySelector("#current-date");
 currentDateELement.innerHTML = formatDate(new Date());
+
 
