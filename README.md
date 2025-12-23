@@ -1,4 +1,4 @@
-# SheCode Project – Weather Forecast
+# Weather Forecast
 
 A simple and responsive **Weather Forecast Web Application** developed as part of the **SheCode Project**.  
 This application allows users to search for a city and view real-time weather information.
