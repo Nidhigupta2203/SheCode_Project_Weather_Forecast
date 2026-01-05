@@ -45,16 +45,12 @@ cd SheCode_Project_Weather_Forecast
 - Responsive design for mobile and desktop  
 - Clean and user-friendly interface
 
----
-
 ## Tech Stack
 
 - HTML5  
 - CSS3  
 - JavaScript (ES6)  
 - Weather API
-
---- 
 
 ## Usage
 
@@ -67,8 +63,6 @@ No backend is required; everything runs in the browser.
 If the API needs a key:
 - Create an API key on the provider site.
 - Put your key in the JavaScript file where the request URL is defined.
-
----
 
 ## Key Functions
 
