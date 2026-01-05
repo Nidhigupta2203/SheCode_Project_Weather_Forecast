@@ -3,7 +3,6 @@
 A simple weather forecast web application that shows real‑time weather information for any city using a public weather API.  
 Built as part of the SheCode program to practice JavaScript, APIs and frontend design.
 
----
 
 ## Overview
 
@@ -15,7 +14,6 @@ This project allows users to:
 
 The focus is on understanding API calls, DOM manipulation and building a clean, responsive UI.
 
----
 
 ## API
 
@@ -26,7 +24,6 @@ The app uses a public weather API (such as OpenWeatherMap) which provides:
 - Humidity and pressure  
 - Weather description and icon (e.g. clear sky, rain)
   
----
 
 ## Installation
 
@@ -35,7 +32,6 @@ git clone https://github.com/Nidhigupta2203/SheCode_Project_Weather_Forecast.git
 cd SheCode_Project_Weather_Forecast
 ```
 
----
 
 ## Features
 
@@ -51,6 +47,7 @@ cd SheCode_Project_Weather_Forecast
 - CSS3  
 - JavaScript (ES6)  
 - Weather API
+  
 
 ## Usage
 
@@ -63,6 +60,7 @@ No backend is required; everything runs in the browser.
 If the API needs a key:
 - Create an API key on the provider site.
 - Put your key in the JavaScript file where the request URL is defined.
+
 
 ## Key Functions
 
